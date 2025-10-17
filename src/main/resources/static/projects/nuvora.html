@@ -353,7 +353,7 @@
       const closeBtn = document.querySelector(".modal-close");
 
       // Open modal when clicking an image
-      document.querySelectorAll(".clickable-image").forEach(img => {
+      document.querySelectorAll(".web-screenshot, .mobile-screenshot").forEach(img => {
         img.addEventListener("click", () => {
           modalImg.src = img.src;
           modal.classList.add("active");
