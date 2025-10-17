@@ -8,14 +8,20 @@
   <link rel="stylesheet" href="../css/style.css">
 </head>
 
+<!-- Modal for full-size image -->
+<div id="imageModal" class="modal" onclick="closeModal()">
+  <span class="modal-close">&times;</span>
+  <img class="modal-content" id="modalImage">
+</div>
+
 <body>
   <header>
     <h1>My Art</h1>
     <p>Creative expressions through handmade crafts and designs</p>
     <a href="../index.html" class="back-link">← Back to Home</a>
     <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
-      <span class="sun-icon">☀️</span>
-      <span class="moon-icon">🌙</span>
+      <span class="sun-icon">🌙</span>
+      <span class="moon-icon">☀️</span>
     </button>
   </header>
 
@@ -139,12 +145,6 @@
       </div>
     </div>
   </section>
-
-  <!-- Modal for full-size image -->
-  <div id="imageModal" class="modal" onclick="closeModal()">
-    <span class="modal-close">&times;</span>
-    <img class="modal-content" id="modalImage">
-  </div>
 
   <footer>
     <p>JhonCeda - Don't be sorry, be better</p>
