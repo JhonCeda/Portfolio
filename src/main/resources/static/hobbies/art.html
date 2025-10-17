@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Art</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+  <header>
+    <h1>My Art</h1>
+    <p>Creative expressions through handmade crafts and designs</p>
+    <a href="../index.html" class="back-link">← Back to Home</a>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+      <span class="sun-icon">☀️</span>
+      <span class="moon-icon">🌙</span>
+    </button>
+  </header>
+
+  <section class="intro-section">
+    <h2>About My Art</h2>
+    <p>I love creating handmade items that combine functionality with creativity. From custom keychains to unique pins
+      and coasters, each piece is crafted with care and attention to detail. Art is my way of bringing a little extra
+      color and personality into everyday life.</p>
+  </section>
+
+  <section class="art-gallery">
+    <!-- Art Item 1 -->
+    <div class="art-item" onclick="openModal(this)">
+      <img src="./art_images/llama_keychain.jpg" alt="Llama keychain" class="art-image clickable-image">
+      <div class="art-info">
+        <h3>Custom Keychain</h3>
+        <div class="art-meta">
+          <span>Keychain</span>
+        </div>
+        <p class="art-description">A llama icon keychain. As far as I remember, I found this searching
+          for a llama design online and thought it was a good fit.
+        </p>
+      </div>
+    </div>
+
+    <!-- Art Item 2 -->
+    <div class="art-item" onclick="openModal(this)">
+      <img src="./art_images/sly_pin.jpg" alt="Sly pin" class="art-image clickable-image">
+      <div class="art-info">
+        <h3>Character Pin</h3>
+        <div class="art-meta">
+          <span>Pin</span>
+        </div>
+        <p class="art-description">The first ever pin I ever created. It's a recreation of my favourite character from
+          the game series Sly Cooper where the main character is a racoon thief and Sly himself.
+        </p>
+      </div>
+    </div>
+
+    <!-- Art Item 3 -->
+    <div class="art-item" onclick="openModal(this)">
+      <img src="./art_images/fox_coaster.jpg" alt="Fox coaster" class="art-image clickable-image">
+      <div class="art-info">
+        <h3>Resin Coaster</h3>
+        <div class="art-meta">
+          <span>Wooden Coaster</span>
+        </div>
+        <p class="art-description">Wood coaster with pixel art design. It adds a playful touch to any tabletop by
+          showcasing a fox design imported from Minecraft.
+        </p>
+      </div>
+    </div>
+
+    <!-- Art Item 4 -->
+    <div class="art-item" onclick="openModal(this)">
+      <img src="./art_images/animal_keychain.jpg" alt="Peculiar keychain design" class="art-image clickable-image">
+      <div class="art-info">
+        <h3>Charm Keychain</h3>
+        <div class="art-meta">
+          <span>Keychain</span>
+        </div>
+        <p class="art-description">This keychain is the back side of the first one. The design was created by
+          a friend of mine and I made it into a keychain to bring it some life and gifting it to her.
+        </p>
+      </div>
+    </div>
+
+    <!-- Art Item 5 -->
+    <div class="art-item" onclick="openModal(this)">
+      <img src="./art_images/triforce_coaster.jpg" alt="Zelda coaster" class="art-image clickable-image">
+      <div class="art-info">
+        <h3>Marble Effect Coaster</h3>
+        <div class="art-meta">
+          <span>Wooden Coaster</span>
+        </div>
+        <p class="art-description">Another wooden coaster showcasing a TriForce symbol from the popular
+          game series The Legend of Zelda.</p>
+      </div>
+    </div>
+
+    <!-- Art Item 6 -->
+    <div class="art-item" onclick="openModal(this)">
+      <img src="./art_images/sus_pin.jpg" alt="Game-inspired pin" class="art-image clickable-image">
+      <div class="art-info">
+        <h3>Game Character Pin</h3>
+        <div class="art-meta">
+          <span>Pin</span>
+        </div>
+        <p class="art-description">This pin can be recognizable for how SUSpicious it is but just like
+          all the other pins, coasters and keychains, it was made for a friend depicting an among us character.
+        </p>
+      </div>
+    </div>
+
+    <!-- Art Item 7 -->
+    <div class="art-item" onclick="openModal(this)">
+      <img src="./art_images/tikou.jpg" alt="Tikou pin" class="art-image clickable-image">
+      <div class="art-info">
+        <h3>Original Character Pin</h3>
+        <div class="art-meta">
+          <span>Pin</span>
+        </div>
+        <p class="art-description">This is the representation of my friend Tikou and it's original character (OC).
+          It was made as a gift for him which according to him is "one of the best gifts" he's ever gotten.
+        </p>
+      </div>
+    </div>
+
+    <!-- Art Item 8 -->
+    <div class="art-item" onclick="openModal(this)">
+      <img src="./art_images/lou.jpg" alt="Lou pin" class="art-image clickable-image">
+      <div class="art-info">
+        <h3>Lou Pin</h3>
+        <div class="art-meta">
+          <span>Pin</span>
+        </div>
+        <p class="art-description">This pin, just like the one above, is also a representation of a friends original
+          character (OC) named Lou. It was a bit more challenging to make due to the small details but it turned out
+          great.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal for full-size image -->
+  <div id="imageModal" class="modal" onclick="closeModal()">
+    <span class="modal-close">&times;</span>
+    <img class="modal-content" id="modalImage">
+  </div>
+
+  <footer>
+    <p>JhonCeda - Don't be sorry, be better</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // ---- Global Image Fallback ----
+      const IMG_FALLBACK = './hobbies/art_images/tikou.jpg';
+
+      document.querySelectorAll('img').forEach(img => {
+        img.addEventListener('error', function handleError() {
+          img.removeEventListener('error', handleError); // avoid infinite loop
+          img.src = img.dataset.fallback || IMG_FALLBACK;
+        });
+      });
+
+      // ---- Theme Toggle ----
+      const html = document.documentElement;
+      const themeToggle = document.getElementById('theme-toggle');
+
+      if (themeToggle) {
+        const savedTheme = localStorage.getItem('theme');
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const currentTheme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
+        html.setAttribute('data-theme', currentTheme);
+
+        themeToggle.addEventListener('click', () => {
+          const newTheme = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+          html.setAttribute('data-theme', newTheme);
+          localStorage.setItem('theme', newTheme);
+        });
+      }
+
+      // ---- Smooth Scrolling ----
+      document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', e => {
+          const targetId = link.getAttribute('href');
+          if (!targetId.startsWith('#')) return; // ignore external links
+          e.preventDefault();
+          const targetSection = document.querySelector(targetId);
+          if (targetSection) {
+            targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            // Close mobile menu after click
+            const mainNav = document.getElementById('main-nav');
+            if (mainNav) {
+              mainNav.classList.remove('active');
+              document.body.style.overflow = 'auto';
+            }
+          }
+        });
+      });
+
+      // ---- Mobile Menu ----
+      const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+      const mainNav = document.getElementById('main-nav');
+
+      if (mobileMenuToggle && mainNav) {
+        mobileMenuToggle.addEventListener('click', () => {
+          mainNav.classList.toggle('active');
+          mobileMenuToggle.classList.toggle('active');
+          document.body.style.overflow = mainNav.classList.contains('active')
+            ? 'hidden'
+            : 'auto';
+        });
+      }
+    });
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const modal = document.getElementById("imageModal");
+      const modalImg = document.getElementById("modalImage");
+      const closeBtn = document.querySelector(".modal-close");
+
+      // Open modal when clicking on an image
+      document.querySelectorAll(".clickable-image").forEach(img => {
+        img.addEventListener("click", () => {
+          modalImg.src = img.src;
+          modal.classList.add("active");
+        });
+      });
+
+      // Close modal when clicking the close button or background
+      closeBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        modal.classList.remove("active");
+      });
+
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) modal.classList.remove("active");
+      });
+    });
+  </script>
+
+
+</body>
+
+</html>

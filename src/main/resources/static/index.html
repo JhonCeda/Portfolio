@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>João's Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="images/favicon.png" type="image/png">
+</head>
+<script src="mobile-menu.js"></script>
+
+<body>
+  <header>
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">
+      <span class="hamburger"></span>
+      <span class="hamburger"></span>
+      <span class="hamburger"></span>
+    </button>
+
+    <nav class="main-nav" id="main-nav">
+      <a href="#about" class="nav-link">About</a>
+      <a href="#academics" class="nav-link">Academics</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#hobbies" class="nav-link">Hobbies</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+    <h1>Hi, I'm João</h1>
+    <p>Distributed and Parallel Systems student at FCT NOVA — artist & hobby cook (pins, coasters, desserts).</p>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+      <span class="moon-icon">☀️</span>
+      <span class="sun-icon">🌙</span>
+    </button>
+  </header>
+
+  <!-- About Section -->
+  <div class="bubble-section" id="about">
+    <div class="circle-bubble">
+      <h2>About Me</h2>
+      <p>Developer & Creative Mind</p>
+    </div>
+    <div class="content-area">
+      <div class="about-content">
+        <div class="about-text">
+          <p>Welcome! I'm João, a software developer pursuing a mix of technology and entertainment. I enjoy building
+            projects to learn new ways to approach various challenges.</p>
+          <p>When I'm not coding, you'll find me experimenting in the kitchen, creating trinkets, grasping the basics of
+            french
+            or diving into new music genres.</p>
+        </div>
+        <div class="profile-container">
+          <img src="./images/favicon.png" alt="profile picture">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Academics Section -->
+  <div class="bubble-section reverse" id="academics">
+    <div class="circle-bubble">
+      <h2>Academic Journey</h2>
+      <p>Learning & Growing</p>
+    </div>
+    <div class="content-area">
+      <h3>Current Studies</h3>
+      <p>MSc in Distributed and Parallel Systems</p>
+      <p>Currently majoring in Distributed and Parallel Systems (you could say I parallelize problems and pastries).</p>
+      <p>I'm also taking a minor in Security Systems in hopes to enhance my understanding of secure computing practices.
+      </p>
+      <h3>Previous Education</h3>
+      <p>Besides the Bachelor in Computer Science, as well as some small courses on algorithms, machine learning and
+        game programming, I've also engaged in tutoring in programming for the TreeTree2 foundation
+        (https://www.treetree2.org/),
+        studied music theory and guitar for 7 years and was distinguished with a roll of honour at the end of highschool
+      </p>
+    </div>
+  </div>
+
+  <!-- Projects Section -->
+  <div class="bubble-section" id="projects">
+    <div class="circle-bubble">
+      <h2>My Projects</h2>
+      <p>Work Experience</p>
+    </div>
+    <div class="content-area">
+      <p>Here are some of the projects I've been working on. Each one represents a unique challenge and learning
+        opportunity.</p>
+      <div class="projects-list">
+        <a href="projects/nuvora.html" class="project-card">
+          <h4>Nuvora Web Application</h4>
+          <p>Nuvora web application for sustainable land management</p>
+        </a>
+        <a href="#" class="project-card">
+          <h4>More Projects Coming Soon</h4>
+          <p>Exciting developments in progress...</p>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hobbies Section -->
+  <div class="bubble-section reverse" id="hobbies">
+    <div class="circle-bubble">
+      <h2>My Hobbies</h2>
+      <p>Some of my side quests</p>
+    </div>
+    <div class="content-area">
+      <div class="hobby-gallery">
+        <div class="hobby-card">
+          <div class="bouquet">
+            <img src="./hobbies/cooking_images/brownie.jpg" alt="Cooking creation">
+            <img src="./hobbies/cooking_images/oreo_mousse.jpg" alt="Dessert">
+          </div>
+          <a href="hobbies/cooking.html" class="hobby-btn">Cooking</a>
+        </div>
+        <div class="hobby-card">
+          <div class="bouquet">
+            <img src="./hobbies/art_images/llama_keychain.jpg" alt="Art project">
+            <img src="./hobbies/art_images/sly_pin.jpg" alt="Pin design">
+            <img src="./hobbies/art_images/fox_coaster.jpg" alt="Coaster">
+          </div>
+          <a href="hobbies/art.html" class="hobby-btn">Art</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <div class="bubble-section" id="contact">
+    <div class="circle-bubble">
+      <h2>Contact</h2>
+      <p>How to get in touch</p>
+    </div>
+    <div class="content-area">
+      <h3>Get In Touch</h3>
+      <p>Feel free to reach out for collaborations, questions, or just to say hi!</p>
+      <div class="contact-links">
+        <a href="https://mail.google.com/mail/?view=cm&to=joaoramalhoventura@gmail.com" target="_blank"
+          class="contact-btn">
+          <span class="contact-icon">📧</span>
+          <span>Email Me</span>
+        </a>
+        <a href="https://github.com/JhonCeda" target="_blank" class="contact-btn">
+          <span class="contact-icon">💻</span>
+          <span>GitHub</span>
+        </a>
+        <a href="https://www.linkedin.com/in/jo%C3%A3o-ventura-16a351263/" target="_blank" class="contact-btn">
+          <span class="contact-icon">💼</span>
+          <span>LinkedIn</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>JhonCeda - Don't be sorry, be better</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // ---- Global Image Fallback ----
+      const IMG_FALLBACK = './hobbies/art_images/tikou.jpg';
+
+      document.querySelectorAll('img').forEach(img => {
+        img.addEventListener('error', function handleError() {
+          img.removeEventListener('error', handleError); // avoid infinite loop
+          img.src = img.dataset.fallback || IMG_FALLBACK;
+        });
+      });
+
+      // ---- Theme Toggle ----
+      const html = document.documentElement;
+      const themeToggle = document.getElementById('theme-toggle');
+
+      if (themeToggle) {
+        const savedTheme = localStorage.getItem('theme');
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const currentTheme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
+        html.setAttribute('data-theme', currentTheme);
+
+        themeToggle.addEventListener('click', () => {
+          const newTheme = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+          html.setAttribute('data-theme', newTheme);
+          localStorage.setItem('theme', newTheme);
+        });
+      }
+
+      // ---- Smooth Scrolling ----
+      document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', e => {
+          const targetId = link.getAttribute('href');
+          if (!targetId.startsWith('#')) return; // ignore external links
+          e.preventDefault();
+          const targetSection = document.querySelector(targetId);
+          if (targetSection) {
+            targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            // Close mobile menu after click
+            const mainNav = document.getElementById('main-nav');
+            if (mainNav) {
+              mainNav.classList.remove('active');
+              document.body.style.overflow = 'auto';
+            }
+          }
+        });
+      });
+
+      // ---- Mobile Menu ----
+      const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+      const mainNav = document.getElementById('main-nav');
+
+      if (mobileMenuToggle && mainNav) {
+        mobileMenuToggle.addEventListener('click', () => {
+          mainNav.classList.toggle('active');
+          mobileMenuToggle.classList.toggle('active');
+          document.body.style.overflow = mainNav.classList.contains('active')
+            ? 'hidden'
+            : 'auto';
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>

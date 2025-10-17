@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cooking – My Hobby</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<!-- Modal for full-size recipe images -->
+<div id="imageModal" class="modal">
+  <span class="modal-close">&times;</span>
+  <img class="modal-content" id="modalImage">
+</div>
+
+
+<body>
+  <header>
+    <h1>Cooking</h1>
+    <p>One of my stress relievers</p>
+    <a href="../index.html" class="back-link">← Back to Home</a>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+      <span class="sun-icon">☀️</span>
+      <span class="moon-icon">🌙</span>
+    </button>
+  </header>
+
+  <section class="intro-section">
+    <h2>Why I Love Cooking</h2>
+    <p>When I enrolled in university, just like most of us, I had to start learning how to cook. There was
+      a learning curve to it but once I got the hang of it, it became pleasant and fun. These days I try to
+      keep it both simple and at times adventurous. Here are some recipes I'd like to share.</p>
+    <p>Reminder that in cooking <span class="highlight">you don't have to follow every recipe by the book. Experiment
+        with what you like and what you have at hand.</span> Give it your own personality.
+    </p>
+  </section>
+
+  <section class="recipes-grid">
+    <!-- Recipe 1: Brownies -->
+    <div class="recipe-card">
+      <img src="./cooking_images/brownie.jpg" alt="Delicious brownies" class="recipe-image"
+        data-fallback="/hobbies/art_images/tikou.jpg">
+      <div class="recipe-content">
+        <h3>Fudgy Brownies</h3>
+        <div class="recipe-meta">
+          <span>⏱️ 25 mins</span>
+          <span>🍽️ 8 servings</span>
+        </div>
+        <p class="recipe-description">
+          Rich, fudgy brownies with a "secret" ingredient. These are the chocolate lovers' dream—dense, moist,
+          and intensely chocolatey.
+        </p>
+        <div class="ingredients">
+          <h4>Ingredients</h4>
+          <ul>
+            <li>120g of butter</li>
+            <li>2 eggs</li>
+            <li>2/3 cup of wheat flour</li>
+            <li>3/4 cup of brown sugar</li>
+            <li>1/2 cup of dark chocolate</li>
+            <li>1/2 cup of dark cocoa powder</li>
+            <li>pinch of salt</li>
+            <li>1 tsp vanilla extract</li>
+          </ul>
+        </div>
+        <div class="instructions">
+          <h4>Instructions</h4>
+          <ol>
+            <li>Preheat oven to 160ºC. Line any pan or container with parchment paper.</li>
+            <li>Melt butter and while its cooing, chop the dark chocolate.</li>
+            <li>Melt butter and while it's cooling, chop the dark chocolate.</li>
+            <li>Combine cocoa powder with the melted butter.</li>
+            <li>Combine the brown sugar and vanilla into the mixture.</li>
+            <li>Add the 2 eggs lightly beaten making sure to not overdo it.</li>
+            <li>Add the flour through a strainer to avoid clumps, pinch of salt and mix.</li>
+            <li>Finally add the chocolate and mix once again.</li>
+            <li>Pour the batter onto the dish tray.</li>
+            <li>Bake 15 minutes, then check every 10 minutes until a toothpick comes out with a few moist crumbs.</li>
+          </ol>
+        </div>
+        <div class="notes">
+          <h4>Notes</h4>
+          <ul>
+            <li>You can brown half the butter and combine the other part for a more rich caramel nutty flavour.</li>
+            <li>You can experiment with different mixing methods to achieve different texture results, such as creaming
+              the sugar and butter or the eggs and butter. Try to see what works best for your taste.</li>
+            <li>For the baking, you can cook or more or less depending on how fudgy or cakey you like your brownies.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Recipe 2: Oreo Mousse -->
+    <div class="recipe-card">
+      <img src="./cooking_images/oreo_mousse.jpg" alt="Oreo mousse dessert" class="recipe-image"
+        data-fallback="/hobbies/art_images/tikou.jpg">
+      <div class="recipe-content">
+        <h3>Oreo Mousse</h3>
+        <div class="recipe-meta">
+          <span>⏱️ 20 mins + chill</span>
+          <span>🍽️ 12 servings</span>
+        </div>
+        <p class="recipe-description">
+          Imagine you love oreos. Now imagine if you could eat them by spoon as much as youd like.
+          This is the perfect recipe for that.
+        </p>
+        <div class="ingredients">
+          <h4>Ingredients</h4>
+          <ul>
+            <li>16 Oreo cookies, for filling (4 packets of 4 each, ~180g)</li>
+            <li>4 Oreos for topping (1 packet of 4, ~44g)</li>
+            <li>400ml of chilled whipping cream (make sure its >35% fat content)</li>
+            <li>400g of sweet and condensed milk</li>
+            <li>2 large sheets of gelatin</li>
+          </ul>
+        </div>
+        <div class="instructions">
+          <h4>Instructions</h4>
+          <ol>
+            <li>Chill the heavy cream in the freezer to ensure it whips up nicely.</li>
+            <li>When peaks start forming and the cream holds its shape, add in the condensed milk</li>
+            <li>Soak the gelatin sheets in cold water until soft, then melt gently and add them into the mixture</li>
+            <li>Add the crushed oreos in.</li>
+            <li>Divide into serving glasses or leave it in a large bowl.</li>
+            <li>Top with reserved Oreo crumbs and refrigerate until set. Preferably overnight</li>
+          </ol>
+        </div>
+        <div class="notes">
+          <h4>Notes</h4>
+          <ul>
+            <li>I suggest chilling the cream for at least 15 minutes to ensure the whipping is consistent and faster.
+            </li>
+            <li>If you think its a lot of condensed milk (which tbh it is), you can use half if you prefer a less sweet
+              mousse.</li>
+            <li>The gelatin part might be tricky so be prepared for some trial and error if you dont get it first try.
+            </li>
+            <li>For the oreos some people like it in all crumbs but i prefer to leave chunks for both texture and more
+              flavour on each bite</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>JhonCeda - Don't be sorry, be better</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // ---- Global Image Fallback ----
+      const IMG_FALLBACK = './hobbies/art_images/tikou.jpg';
+
+      document.querySelectorAll('img').forEach(img => {
+        img.addEventListener('error', function handleError() {
+          img.removeEventListener('error', handleError); // avoid infinite loop
+          img.src = img.dataset.fallback || IMG_FALLBACK;
+        });
+      });
+
+      // ---- Theme Toggle ----
+      const html = document.documentElement;
+      const themeToggle = document.getElementById('theme-toggle');
+
+      if (themeToggle) {
+        const savedTheme = localStorage.getItem('theme');
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const currentTheme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
+        html.setAttribute('data-theme', currentTheme);
+
+        themeToggle.addEventListener('click', () => {
+          const newTheme = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+          html.setAttribute('data-theme', newTheme);
+          localStorage.setItem('theme', newTheme);
+        });
+      }
+
+      // ---- Smooth Scrolling ----
+      document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', e => {
+          const targetId = link.getAttribute('href');
+          if (!targetId.startsWith('#')) return; // ignore external links
+          e.preventDefault();
+          const targetSection = document.querySelector(targetId);
+          if (targetSection) {
+            targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            // Close mobile menu after click
+            const mainNav = document.getElementById('main-nav');
+            if (mainNav) {
+              mainNav.classList.remove('active');
+              document.body.style.overflow = 'auto';
+            }
+          }
+        });
+      });
+
+      // ---- Mobile Menu ----
+      const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+      const mainNav = document.getElementById('main-nav');
+
+      if (mobileMenuToggle && mainNav) {
+        mobileMenuToggle.addEventListener('click', () => {
+          mainNav.classList.toggle('active');
+          mobileMenuToggle.classList.toggle('active');
+          document.body.style.overflow = mainNav.classList.contains('active')
+            ? 'hidden'
+            : 'auto';
+        });
+      }
+    });
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const modal = document.getElementById("imageModal");
+      const modalImg = document.getElementById("modalImage");
+      const closeBtn = document.querySelector(".modal-close");
+
+      // Open modal when clicking a recipe image
+      document.querySelectorAll(".recipe-image").forEach(img => {
+        img.addEventListener("click", () => {
+          modalImg.src = img.src;
+          modal.classList.add("active");
+        });
+      });
+
+      // Close when clicking the × button
+      closeBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        modal.classList.remove("active");
+      });
+
+      // Close when clicking background
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) modal.classList.remove("active");
+      });
+    });
+  </script>
+
+
+</body>
+
+</html>

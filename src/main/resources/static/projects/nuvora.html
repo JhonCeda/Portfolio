@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LandIt Land Management Platform</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+  <header>
+    <h1>LandIt Land Management Platform</h1>
+    <p>Full-stack web and mobile application for sustainable land management</p>
+    <a href="../index.html" class="back-link">← Back to Home</a>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+      <span class="sun-icon">☀️</span>
+      <span class="moon-icon">🌙</span>
+    </button>
+  </header>
+
+  <!-- Project Overview -->
+  <section class="project-hero">
+    <h2>Project Overview</h2>
+    <div class="project-meta">
+      <span class="meta-item">
+        <span class="meta-icon">🏢</span>
+        <span>In Partnership with <a href="https://landit.pt/" target="_blank" class="partner-link">LandIt</a></span>
+      </span>
+      <span class="meta-item">
+        <span class="meta-icon">📍</span>
+        <span>Mação, Portugal</span>
+      </span>
+      <span class="meta-item">
+        <span class="meta-icon">👥</span>
+        <span>Full-Stack Development</span>
+      </span>
+    </div>
+
+    <p class="project-description">
+      Developed in collaboration with <a href="https://landit.pt/" target="_blank" class="partner-link">LandIt</a> and
+      the Câmara Municipal de Mação,
+      this comprehensive platform addresses a critical challenge in Portuguese land management: fragmented land
+      ownership.
+      Many rural areas in Portugal have land divided into extremely small parcels, making efficient agricultural or
+      environmental use nearly impossible.
+    </p>
+
+    <p class="project-description">
+      Our solution provides a complete ecosystem for landowners, operators, administrators, and municipal
+      representatives to consolidate,
+      manage, and optimize land usage for economic, cultural, and environmental benefits. The platform features both web
+      and mobile interfaces,
+      enabling field operators to work directly on-site while administrators manage operations from the office.
+    </p>
+
+    <h3 class="section-subtitle">Technologies Used</h3>
+    <div class="tech-stack">
+      <span class="tech-badge">Google App Engine</span>
+      <span class="tech-badge">Google Maps API</span>
+      <span class="tech-badge">Firebase</span>
+      <span class="tech-badge">Java</span>
+      <span class="tech-badge">REST API</span>
+      <span class="tech-badge">GeoJSON</span>
+      <span class="tech-badge">JWT + Cookies</span>
+      <span class="tech-badge">GPX Processing</span>
+      <span class="tech-badge">Flutter</span>
+      <span class="tech-badge">Dart</span>
+      <span class="tech-badge">JavaScript</span>
+      <span class="tech-badge">CSS</span>
+      <span class="tech-badge">HTML</span>
+    </div>
+
+    <h3 class="section-subtitle">User Roles & Permissions</h3>
+    <div class="roles-grid">
+      <div class="role-card">
+        <h5>👨‍💼 Administrator</h5>
+        <p>Full system access, user management, report generation, and platform configuration</p>
+      </div>
+      <div class="role-card">
+        <h5>🏛️ Municipal Representative</h5>
+        <p>Oversight of operations, approval workflows, and municipal coordination</p>
+      </div>
+      <div class="role-card">
+        <h5>🌾 Landowner</h5>
+        <p>View assigned lands, track operations, receive notifications, and monitor progress</p>
+      </div>
+      <div class="role-card">
+        <h5>👷 Field Operator</h5>
+        <p>Execute operations, upload GPX data, share photos, record observations, mark completion</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-grid">
+    <div class="feature-section">
+      <h3>Core Features</h3>
+
+      <!-- Feature 1: Mobile Map Interface -->
+      <div class="feature-row">
+        <div class="feature-content">
+          <h4>Mobile Field Operations</h4>
+          <p>
+            Field operators use the mobile app to navigate land parcels, record real-time data, and document their work.
+            The map interface displays imported GeoJSON worksheets, allowing operators to see exact boundaries and
+            operational areas.
+          </p>
+          <ul>
+            <li>Interactive map with GeoJSON parcel boundaries</li>
+            <li>GPS tracking and GPX file generation</li>
+            <li>Photo capture with geolocation tagging</li>
+            <li>Field observation notes and documentation</li>
+            <li>Offline mode for areas with poor connectivity</li>
+            <li>Operation status updates (in progress/completed)</li>
+          </ul>
+        </div>
+        <div class="feature-image" onclick="openProjectModal(this)">
+          <img src="./nuvora_images/map_mobile.png" alt="Mobile map interface for field operations"
+            class="mobile-screenshot clickable-image">
+        </div>
+      </div>
+
+      <!-- Feature 2: Web Map Dashboard -->
+      <div class="feature-row reverse">
+        <div class="feature-content">
+          <h4>Web Map Management Dashboard</h4>
+          <p>
+            The web platform provides administrators and representatives with a comprehensive view of all land parcels
+            and ongoing operations.
+            GeoJSON worksheets imported from municipal systems are visualized on interactive maps, enabling efficient
+            territory management.
+          </p>
+          <ul>
+            <li>Import and parse GeoJSON worksheets from municipal databases</li>
+            <li>Visualize land parcels with detailed property information</li>
+            <li>Create and manage execution sheets for operations</li>
+            <li>Assign operators to specific parcels and tasks</li>
+            <li>Monitor operation progress in real-time</li>
+            <li>Generate reports and analytics on land usage</li>
+          </ul>
+        </div>
+        <div class="feature-image" onclick="openProjectModal(this)">
+          <img src="./nuvora_images/map_web.png" alt="Web dashboard with land management maps"
+            class="web-screenshot clickable-image">
+        </div>
+      </div>
+
+      <!-- Feature 3: Admin Dashboard & User Area -->
+      <div class="feature-row">
+        <div class="feature-content">
+          <h4>Admin Dashboard & User Management</h4>
+          <p>
+            The admin interface provides a centralized hub for managing all aspects of the platform.
+            From this dashboard, administrators can access user management tools, send notifications, monitor system
+            activity,
+            and configure platform settings.
+          </p>
+          <ul>
+            <li>User Management - Create, edit, and delete user accounts</li>
+            <li>Notifications Center - Send system-wide or targeted notifications</li>
+            <li>List Users - View and filter all platform users</li>
+            <li>Support Tools - Access help resources and documentation</li>
+            <li>User Data Management - Modify individual user information</li>
+            <li>Profile Settings - Configure admin account preferences</li>
+          </ul>
+        </div>
+        <div class="feature-image" onclick="openProjectModal(this)">
+          <img src="./nuvora_images/profile_mobile.png" alt="Admin dashboard and user management interface"
+            class="mobile-screenshot clickable-image">
+        </div>
+      </div>
+
+      <!-- Feature 4: User Management System -->
+      <div class="feature-row reverse">
+        <div class="feature-content">
+          <h4>Comprehensive User Management</h4>
+          <p>
+            Administrators can create, manage, and monitor all platform users with role-based access control.
+            The system supports multiple user types, each with specific permissions tailored to their responsibilities.
+          </p>
+          <ul>
+            <li>Create and manage users across all roles</li>
+            <li>Assign role-based permissions (Admin, Representative, Landowner, Operator)</li>
+            <li>Monitor user activity and operation history</li>
+            <li>Bulk user import from municipal databases</li>
+            <li>User authentication with persistent JWT tokens and cookies</li>
+            <li>Password reset and account recovery workflows</li>
+          </ul>
+        </div>
+        <div class="feature-image" onclick="openProjectModal(this)">
+          <img src="./nuvora_images/list_users_web.png" alt="User management dashboard"
+            class="web-screenshot clickable-image">
+        </div>
+      </div>
+
+      <!-- Feature 5: Additional Features -->
+      <!-- EMERGENCY CONTACTS -->
+      <div class="feature-row">
+        <div class="feature-content">
+          <h3>Emergency Contacts</h3>
+          <h4>Quick Dial</h4>
+          <p>Access your most important emergency numbers instantly with one tap.</p>
+          <h4>Better Help Than Not</h4>
+          <p>Work in areas like this can lead to dangerous situations. Always have a plan and know who to call.</p>
+        </div>
+        <div class="feature-image" onclick="openProjectModal(this)">
+          <img src="./nuvora_images/emergency_mobile.png" alt="Emergency contacts"
+            class="mobile-screenshot clickable-image">
+        </div>
+      </div>
+
+      <!-- EXTRAS -->
+      <div class="feature-row reverse">
+        <div class="feature-content">
+          <h3>Extras</h3>
+          <h4>Surveys</h4>
+          <p>Participate in quick feedback surveys to help improve the platform and share your experience.</p>
+          <h4>Notifications</h4>
+          <p>Stay informed with instant alerts for system updates, security events, and personalized reminders.</p>
+          <h4>Reports</h4>
+          <p>Generate and review activity or usage reports, exportable as PDF or CSV for detailed analysis.</p>
+        </div>
+        <div class="feature-image" onclick="openProjectModal(this)">
+          <img src="./nuvora_images/extras_mobile.png" alt="Extra features like surveys and notifications"
+            class="mobile-screenshot clickable-image">
+        </div>
+      </div>
+
+
+      <!-- Technical Implementation -->
+      <div class="project-hero">
+        <h3 class="section-subtitle">Technical Implementation</h3>
+
+        <h4 class="subsection-title">Authentication & Security</h4>
+        <p class="project-description">
+          Implemented JWT-based authentication with persistent cookies for seamless user experience.
+          The token system ensures secure communication between client and server while maintaining user sessions across
+          app restarts.
+          Role-based access control (RBAC) via JWT-tokens restricts features and data based on user permissions.
+        </p>
+
+        <h4 class="subsection-title">GeoJSON Processing & Mapping</h4>
+        <p class="project-description">
+          Developed a robust GeoJSON import system that processes worksheets from municipal databases, validates
+          geometry
+          data,
+          and renders complex land parcels on interactive maps. The system handles large datasets efficiently,
+          supporting
+          thousands of parcels without much performance degradation.
+        </p>
+
+        <h4 class="subsection-title">GPX Data Management</h4>
+        <p class="project-description">
+          Field operators can upload GPX tracks from GPS devices, which are parsed, validated, and displayed on maps
+          alongside operation data.
+          This provides accurate records of work performed and enables verification of completed operations.
+        </p>
+
+        <h3 class="section-subtitle">Challenges & Solutions</h3>
+        <p class="project-description">
+          One major challenge was handling the complexity of fragmented land ownership data from municipal systems.
+          We solved this by creating a flexible GeoJSON parser that could adapt to different data formats and validate
+          geometries before import.
+        </p>
+
+        <h3 class="section-subtitle">Key Learnings</h3>
+        <ul class="learnings-list">
+          <li>Working with GIS data (GeoJSON, GPX) and mapping libraries</li>
+          <li>Implementing complex role-based access control systems</li>
+          <li>Secure authentication with JWT and persistent cookies</li>
+          <li>Collaborating with municipal partners and real-world stakeholders</li>
+          <li>Full-stack development from database design to UI and UX design</li>
+        </ul>
+      </div>
+  </section>
+
+  <!-- Modal for full-size image -->
+  <div id="projectImageModal" class="modal">
+    <span class="modal-close">&times;</span>
+    <img class="modal-content" id="projectModalImage">
+  </div>
+
+  <footer>
+    <p>JhonCeda - Don't be sorry, be better</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // ---- Global Image Fallback ----
+      const IMG_FALLBACK = './hobbies/art_images/tikou.jpg';
+
+      document.querySelectorAll('img').forEach(img => {
+        img.addEventListener('error', function handleError() {
+          img.removeEventListener('error', handleError); // avoid infinite loop
+          img.src = img.dataset.fallback || IMG_FALLBACK;
+        });
+      });
+
+      // ---- Theme Toggle ----
+      const html = document.documentElement;
+      const themeToggle = document.getElementById('theme-toggle');
+
+      if (themeToggle) {
+        const savedTheme = localStorage.getItem('theme');
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const currentTheme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
+        html.setAttribute('data-theme', currentTheme);
+
+        themeToggle.addEventListener('click', () => {
+          const newTheme = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+          html.setAttribute('data-theme', newTheme);
+          localStorage.setItem('theme', newTheme);
+        });
+      }
+
+      // ---- Smooth Scrolling ----
+      document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', e => {
+          const targetId = link.getAttribute('href');
+          if (!targetId.startsWith('#')) return; // ignore external links
+          e.preventDefault();
+          const targetSection = document.querySelector(targetId);
+          if (targetSection) {
+            targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            // Close mobile menu after click
+            const mainNav = document.getElementById('main-nav');
+            if (mainNav) {
+              mainNav.classList.remove('active');
+              document.body.style.overflow = 'auto';
+            }
+          }
+        });
+      });
+
+      // ---- Mobile Menu ----
+      const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+      const mainNav = document.getElementById('main-nav');
+
+      if (mobileMenuToggle && mainNav) {
+        mobileMenuToggle.addEventListener('click', () => {
+          mainNav.classList.toggle('active');
+          mobileMenuToggle.classList.toggle('active');
+          document.body.style.overflow = mainNav.classList.contains('active')
+            ? 'hidden'
+            : 'auto';
+        });
+      }
+    });
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const modal = document.getElementById("projectImageModal");
+      const modalImg = document.getElementById("projectModalImage");
+      const closeBtn = document.querySelector(".modal-close");
+
+      // Open modal when clicking an image
+      document.querySelectorAll(".clickable-image").forEach(img => {
+        img.addEventListener("click", () => {
+          modalImg.src = img.src;
+          modal.classList.add("active");
+        });
+      });
+
+      // Close modal when clicking the close button
+      closeBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        modal.classList.remove("active");
+      });
+
+      // Close modal when clicking background
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) modal.classList.remove("active");
+      });
+    });
+  </script>
+
+
+</body>
+
+</html>
